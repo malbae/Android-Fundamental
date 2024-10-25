@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout="@layout/fragment_favorite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView for empty message when no favorites are found -->
+    <TextView
+        android:id="@+id/tv_empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No favorites available"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp" />
+
+    <!-- RecyclerView for displaying favorite events -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorite_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="80dp"
+    android:clipToPadding="false"
+        android:visibility="visible" />
+</LinearLayout>
